@@ -4,5 +4,5 @@ pydantic>=2.5.0
 mistralai>=0.0.7
 
 # Optional utilities
-aiohttp
-typing-extensions
+aiohttp>=3.9.3
+typing-extensions>=4.10.0

@@ -21,16 +21,25 @@ class MessageHandler:
         user_id = update.effective_user.id
         message = update.message.text
         
+        # If user is in editing mode, handle edit
+        if user_id in self.editing_field:
+            return await self.handle_edit_input(update, context)
+        
         try:
-            # Send processing message
+            # Send processing message with animation
             processing_message = await update.message.reply_text(
-                "Processing your deals... Please wait."
+                "🔄 Processing your deals...\n"
+                "I'll help you format and validate the information."
             )
             
             # Parse deals
             formatted_deals = self.deal_parser.parse_deals(message)
             if not formatted_deals:
-                await processing_message.edit_text("No valid deals found in message.")
+                await processing_message.edit_text(
+                    "❌ No valid deals found.\n\n"
+                    "Please format your deals like this:\n"
+                    "GEO: US Partner: AcmeCorp Price: $100 CR: 10% Sources: Google Ads"
+                )
                 return
                 
             # Convert to Deal objects
@@ -39,7 +48,8 @@ class MessageHandler:
             # Store deals for this user
             self.current_deals[user_id] = {
                 'deals': deals,
-                'current_index': 0
+                'current_index': 0,
+                'original_text': message
             }
             
             # Show first deal
@@ -48,7 +58,10 @@ class MessageHandler:
         except Exception as e:
             logger.error(f"Error processing message: {str(e)}", exc_info=True)
             await update.message.reply_text(
-                "Error processing your message. Please check the format and try again."
+                "❌ Error processing your message.\n\n"
+                "Please use this format:\n"
+                "GEO: US Partner: AcmeCorp Price: $100 CR: 10% Sources: Google Ads\n\n"
+                "Need help? Type /help for a detailed guide."
             )
 
     async def _show_deal(self, update: Update, message, user_id: int):
@@ -61,21 +74,21 @@ class MessageHandler:
         total_deals = len(user_data['deals'])
         current_num = user_data['current_index'] + 1
         
-        # Format deal message
+        # Format deal message with emojis and better formatting
         deal_text = (
-            f"Deal {current_num}/{total_deals}:\n\n"
-            f"Region: {deal.region}\n"
-            f"Partner: {deal.partner}\n"
-            f"GEO: {deal.geo}\n"
-            f"Language: {deal.language}\n"
-            f"Source: {deal.source}\n"
-            f"Model: {deal.model}\n"
-            f"CPA: {deal.cpa if deal.cpa else 'N/A'}\n"
-            f"CRG: {deal.crg if deal.crg else 'N/A'}\n"
-            f"CPL: {deal.cpl if deal.cpl else 'N/A'}\n"
-            f"Funnels: {deal.funnels}\n"
-            f"CR: {deal.cr if deal.cr else 'N/A'}\n"
-            f"Deduction Limit: {deal.deduction_limit if deal.deduction_limit else 'N/A'}"
+            f"📊 Deal {current_num}/{total_deals}\n\n"
+            f"🌍 Region: {deal.region}\n"
+            f"🤝 Partner: {deal.partner}\n"
+            f"🗺 GEO: {deal.geo}\n"
+            f"🗣 Language: {deal.language}\n"
+            f"📱 Source: {deal.source}\n"
+            f"💰 Model: {deal.model}\n"
+            f"💵 CPA: {deal.cpa if deal.cpa else 'N/A'}\n"
+            f"📈 CRG: {deal.crg*100 if deal.crg else 'N/A'}%\n"
+            f"🎯 CPL: {deal.cpl if deal.cpl else 'N/A'}\n"
+            f"🔄 Funnels: {', '.join(deal.funnels)}\n"
+            f"📊 CR: {deal.cr*100 if deal.cr else 'N/A'}%\n"
+            f"⚠️ Deduction Limit: {deal.deduction_limit*100 if deal.deduction_limit else 'N/A'}%"
         )
         
         # Create keyboard

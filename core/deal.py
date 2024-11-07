@@ -1,5 +1,5 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List
+from pydantic import BaseModel, Field, validator
+from typing import Optional, List, Dict, Union
 import hashlib
 import logging
 import sqlite3
@@ -7,28 +7,80 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-class Deal(BaseModel):
-    region: str
+class DealMetadata(BaseModel):
+    structure_type: str = "single_line"  # Default value
+    shared_fields: List[str] = []
+    implicit_fields: List[str] = []
+    confidence_flags: Dict[str, str] = {}
+
+class DealData(BaseModel):
     partner: str
+    region: str
     geo: str
     language: str = "Native"
     source: str = "&"
-    model: str = "cpa_crg"
+    pricing_model: str = "cpa_crg"
     cpa: Optional[float] = None
     crg: Optional[float] = None
     cpl: Optional[float] = None
-    funnels: List[str]
+    funnels: List[str] = []
     cr: Optional[float] = None
     deduction_limit: Optional[float] = None
+
+    @validator('crg', 'cr', 'deduction_limit', pre=True)
+    def parse_percentage(cls, v):
+        if v == '&' or v is None:
+            return None
+        if isinstance(v, str):
+            # Handle percentage strings like "10%" or "2%|3%"
+            parts = v.replace('%', '').split('|')
+            if len(parts) == 1:
+                return float(parts[0]) / 100
+            return float(parts[0]) / 100  # Take first value if range
+        return v
+
+    @validator('funnels', pre=True)
+    def parse_funnels(cls, v):
+        if v == '&' or v is None:
+            return []
+        if isinstance(v, str):
+            # Split on both | and / characters
+            return [f.strip() for f in v.replace('|', '/').split('/')]
+        return v
+
+class Deal(BaseModel):
+    raw_text: str
+    metadata: DealMetadata
+    parsed_data: DealData
+
+    @classmethod
+    def from_parser_output(cls, deal_text: str, parser_output: dict):
+        """Create Deal instance from parser output"""
+        # Create metadata
+        metadata = DealMetadata(
+            structure_type="single_line",
+            shared_fields=[],
+            implicit_fields=[],
+            confidence_flags={}
+        )
+
+        # Create parsed data
+        parsed_data = DealData(**parser_output)
+
+        return cls(
+            raw_text=deal_text,
+            metadata=metadata,
+            parsed_data=parsed_data
+        )
 
     def get_hash(self) -> str:
         """Generate a hash of the deal's core attributes"""
         deal_string = (
-            f"{self.geo.upper()}|"
-            f"{self.cpa or ''}|{self.crg or ''}|{self.cpl or ''}|"
-            f"{self.source.lower()}|"
-            f"{'|'.join(sorted(self.funnels))}|"
-            f"{self.partner.lower()}"
+            f"{self.parsed_data.geo.upper()}|"
+            f"{self.parsed_data.cpa or ''}|{self.parsed_data.crg or ''}|{self.parsed_data.cpl or ''}|"
+            f"{self.parsed_data.source.lower()}|"
+            f"{'|'.join(sorted(self.parsed_data.funnels))}|"
+            f"{self.parsed_data.partner.lower()}"
         )
         return hashlib.md5(deal_string.encode()).hexdigest()
 
@@ -119,18 +171,18 @@ class DealProcessor:
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """,
                     (
-                        processed_deal.region,
-                        processed_deal.partner,
-                        processed_deal.geo,
-                        processed_deal.language,
-                        processed_deal.source,
-                        processed_deal.model,
-                        processed_deal.cpa,
-                        processed_deal.crg,
-                        processed_deal.cpl,
-                        '|'.join(processed_deal.funnels),
-                        processed_deal.cr,
-                        processed_deal.deduction_limit,
+                        processed_deal.parsed_data.region,
+                        processed_deal.parsed_data.partner,
+                        processed_deal.parsed_data.geo,
+                        processed_deal.parsed_data.language,
+                        processed_deal.parsed_data.source,
+                        processed_deal.parsed_data.pricing_model,
+                        processed_deal.parsed_data.cpa,
+                        processed_deal.parsed_data.crg,
+                        processed_deal.parsed_data.cpl,
+                        '|'.join(processed_deal.parsed_data.funnels),
+                        processed_deal.parsed_data.cr,
+                        processed_deal.parsed_data.deduction_limit,
                         deal_hash
                     )
                 )
