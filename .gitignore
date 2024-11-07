@@ -57,3 +57,4 @@ Icon
 # Miscellaneous
 .tmp/
 .cache/
+.aider*

@@ -1,0 +1,8 @@
+python-telegram-bot>=20.0
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+mistralai>=0.0.7
+
+# Optional utilities
+aiohttp
+typing-extensions
