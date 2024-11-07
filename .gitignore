@@ -1,4 +1,5 @@
 # Python-specific ignores
+ai-docs/
 __pycache__/
 *.py[cod]
 *$py.class
