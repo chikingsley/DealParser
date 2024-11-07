@@ -3,7 +3,7 @@ from mistralai import Mistral
 from typing import List, Dict, Any
 import os
 from dotenv import load_dotenv
-from .prompts import SYSTEM_PROMPT, create_user_prompt
+from core.prompts import SYSTEM_PROMPT, create_user_prompt
 import time
 import random
 import json
