@@ -354,4 +354,1117 @@ facebook
 
 Geo: NL SE NO FI DK BE - eng
 Price: 1300 + 11 %
-Funnels: immediate definity, immedia
+Funnels: immediate definity, immediate edge, immediate profit, bitgpt app
+Source: Facebook
+
+BE NL LU - eng
+Price:1400 - 1450 +14 %
+Funnels: Immediate NextGen
+Source:FB+GGL
+
+SE
+Immediate Luminary
+1450+10%
+facebook
+
+Geo: NL SE NO FI DK BE - eng
+Price: 1300 + 11 %
+Funnels: immediate definity, immediate edge, immediate profit, bitgpt app
+Source: Facebook
+
+BE NL LU - eng
+Price:1400 - 1450 +14 %
+Funnels: Immediate NextGen
+Source:FB+GGL
+
+
+Partner: Hong
+Country : FR
+Source : Bing+Google
+Funnels : AI + Immediate related funnels.
+Price : 950+10%
+
+Country : BE fr
+Source : Facebook+Google
+Funnels : Immediate Ai.
+Price : 1350+13%
+
+Geo : CH fr
+Source : Bing/Seo
+Funnels :  Immediate Ai , Vortex/Echo Prism Ai.
+Price : 1650+20%
+
+Geo : PL
+Source : Google SEO
+Funnels : AI + Immediate related funnels mostly.
+Price : 1400+15%
+
+Geo : CA
+Source : Bing+Seo
+Funnels : Cyber Starus Ai , Vortex Echo Ai.
+Price : 1300+12%
+
+Geo : UK
+Source : Bing
+Funnels : Wealth Catalyst AI.
+Price : 1250+10%
+
+Geo : UK
+Source : Google Seo
+Funnels : Ai / Immediate related.
+Price : 1250+12%
+
+Geo : AT
+Source : FB+Google
+Funnels : AI / BTC/ Immediate related.
+Price : 1300+15%
+
+Geo : DE
+Source : Bing+Google
+Funnels : AI + Immediate + BTC related funnels.
+Price : 1450+20%
+
+Country : CZ
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 11705+12%
+
+Country : HR
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1200+10%
+
+Country : HU
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+8%
+
+Country : SK
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+10%
+
+Country : SL
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+10%
+
+Country : NZ
+Source : Facebook+SEO
+Funnels : Mostly -  Phantom Finance, Ai/BTC/Immediate related.
+Price : 1250+12%
+
+Country : AU
+Source : Bing+Google
+Funnels : Wealth Catalyst AI.
+Price : 1300+15%
+
+Country : AU
+Source : FB
+Funnels : The Quantum Ai , Bitcoin Ai.
+Price : 1300+10%
+
+Country : GR
+Source : Google
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+8%
+
+Geo : IT
+Source : FB
+Funnels : Bitcoin Ai , Immediate Con.
+Price : 1300+13%
+
+Geo : ES
+Source : FB+Google
+Funnels : Bitcoin Ai / Millunero , Immediate Con , AI Trading.
+Price : 1300+12%
+
+Country : PT
+Source : Google
+Funnels : Bitcoin Ai .
+Price : 1200 + 10%
+
+Country : SE
+Source : Facebook+Seo
+Funnels : BTC/ Ai / Immediate related.
+Price : 1350+15%
+
+Country : DK
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1350+15%
+
+Country : NL
+Source : Google Display + Google Seo
+Funnels : Mostly - Immediate Ai .
+Price : 1300 + 15%
+
+Country : FI
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1350 + 15%
+
+Geo : BE nl
+Source : Google Seo
+Funnels : Immediate + AI funnels mostly.
+Price : 1550+17%
+
+Country : IE
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1300 + 13%
+
+Country : BR
+Source : Bing
+Impuls Pro AI , Fortuna Crescente Oil AI , Vortice Ethreum.
+Price : 700 + 5%
+
+Geo : ZA ( Mix - Whites + Black )
+Source : Bing+Seo
+Funnels : AI + Immediate related funnels.
+Price : 650+4%
+
+Geo : MY
+Source : Bing+Seo
+Funnels : Cyber Starus Ai , Vortex Echo Ai.
+Price : 1100+11% or 1200+10%
+
+
+---------------------DV---------------------
+
+Geo : DE
+Source : Google DV 360
+Funnels : Bitcoin Vista ( might change on the campaign morning )
+Price : 1300+20%
+
+Geo : UK
+Source : Google DV 360
+Funnels : Immediate Peak Trading , AI Invest.
+Price : 1250+10%
+
+: IT
+: Facebook
+: Finance Phantom, Immediate Mix profit ai
+1250+10%
+
+: DE
+: Facebook
+: Immediate Mix
+: 1350 +13%
+
+: CAen
+: Finance Phantom, Quantum, Immediate Mix
+: Facebook
+: 1300+12%
+
+: SE 
+: Finance Phantom, Immediate Mix
+: Facebook
+: 1300 + 15%
+
+: NO 
+: Finance Phantom, Profit Ai, Immediate Mix
+: Facebook
+: 1300 + 14%
+
+: DK
+: Finance Phantom, HyperTrader Ai, Immediate Mix
+: Facebook
+: 1300 + 14%
+
+Company: FTD Company
+🇩🇪DE(nat) —  Oil Profit, Bitcoin 360 Ai, Immediate Edge, HB-Swiss, BITCOINEER
+CR: 8-10%
+PRICE: 1000$+9% CRG
+
+🇪🇸ES (nat) — Trade App, Immediate Connect, BITCOINEER, Gemini2, BtcBillionaire, Repsol,IndiTex Capital
+CR: 6-7%
+PRICE: 950$+7% CRG
+
+🇨🇱CL —Antofagasta, Bitcoin Billionaire, BITEVEX, OilProfit, Falabella
+CR: 3%
+PRICE: 600$+3% CRG
+
+🇲🇽MX— OilProfit, BitQT
+CR: 2-3%
+PRICE: 600$+3% CRG
+ 
+🇨🇴CO— Ecopetrol
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇪🇨EC— Gemini
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇧🇷BR—BTC 360, ChatGPT
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇵🇪 PE— OilProfit, BitcoinBillionaire
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇮🇹IT(nat) — Immediate Connect, Immediate Edge, Trade App, Chat GPT Trade, BitQT, BitcoinTrader, CryptoCapitale, Gemini, Quantum AI
+CR: 6-7%
+PRICE: 900$+7% CRG
+
+🇫🇷FR(nat) —Immediate Edge, Quantum, BTC360 AI, BitSoft, QuantumAI, Tesler, BitiCodes, trading AI
+CR: 7%
+PRICE: 900$+7% CRG
+
+🇸🇬SG  (en) — Immediate Apex, Tesler, Immediate Edge, Amazon, BtcBillionaire, QuantumAI, BitQT, Btc360AI
+CR: 8%
+PRICE: 900$+8% CRG
+
+🇨🇱CL —Antofagasta, Bitcoin Billionaire, BITEVEX, OilProfit, Falabella
+CR: 3%
+PRICE: 600$+3% CRG
+
+🇲🇽MX— OilProfit, BitQT
+CR: 2-3%
+PRICE: 600$+3% CRG
+ 
+🇨🇴CO— Ecopetrol
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇪🇨EC— Gemini
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇧🇷BR—BTC 360, ChatGPT
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇵🇪 PE— OilProfit, BitcoinBillionaire
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🌍GCC (en) - Amazon 
+CR: 6-7%
+PRICE: 750+6% CRG
+GEOs: Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, and the United Arab Emirates
+
+🌍GCC (native) - GuardianAngel, Aramco, BtcEra, QuantumAI
+CR - 6%+
+CRG - 800$+6%
+GEOs: Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, and the United Arab Emirates
+
+🇸🇬SG (en) — Immediate Apex, Tesler, Immediate Edge, Amazon, BtcBillionaire, QuantumAI, BitQT, Btc360AI
+CR: 8%
+PRICE: 900$+8% CRG
+
+🇪🇸ES (nat) — Trade App, Immediate Connect, BITCOINEER, Gemini2, BtcBillionaire, Repsol,IndiTex Capital
+CR: 6-7%
+PRICE: 950$+7% CRG
+
+🇩🇪DE (nat) —  Oil Profit, Bitcoin 360 Ai, Immediate Edge, HB-Swiss, BITCOINEER, Bitcoin Breaker
+CR: 8-10%
+PRICE: 1000$+9% CRG
+
+🇧🇪BE (en) — BitQT, Bitcoin 360 AI,  Immediate Apex, Tesler, Immediate Edge, Amazon, BtcBillionaire, QuantumAI
+CR: 8-10%+
+PRICE: 1000$+9% CRG
+
+🇮🇹IT (nat) — Immediate Connect, Immediate Edge, Trade App, Chat GPT Trade, BitQT, BitcoinTrader, CryptoCapitale, Gemini, Quantum AI
+CR: 6-7%
+PRICE: 900$+7% CRG
+
+🇨🇱CL —Antofagasta, Bitcoin Billionaire, BITEVEX, OilProfit, Falabella
+CR: 3%
+PRICE: 600$+3% CRG
+
+🇲🇽MX— OilProfit, BitQT
+CR: 2-3%
+PRICE: 600$+3% CRG
+ 
+🇨🇴CO— Ecopetrol
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇪🇨EC— Gemini
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇧🇷BR—BTC 360, ChatGPT
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇵🇪 PE— OilProfit, BitcoinBillionaire
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇬🇧UK (en) —  Immediate Apex, Tesler, Immediate Edge, Amazon, BtcBillionaire, QuantumAI, BitQT, Btc360AI
+CR: 8%+
+PRICE: 950$+8% CRG
+
+🇦🇹AT (nat) —  Oil Profit, Bitcoin 360 Ai, Immediate Edge, HB-Swiss, BITCOINEER
+CR: 8-10%
+PRICE: 1000$+9% CRG
+
+🇩🇪DE (nat) —  Oil Profit, Bitcoin 360 Ai, Immediate Edge, HB-Swiss, BITCOINEER
+CR: 8-10%
+PRICE: 1000$+9% CRG
+
+🇨🇱CL —Antofagasta, Bitcoin Billionaire, BITEVEX, OilProfit, Falabella
+CR: 3%
+PRICE: 600$+3% CRG
+
+🇲🇽MX— OilProfit, BitQT
+CR: 2-3%
+PRICE: 600$+3% CRG
+ 
+🇨🇴CO— Ecopetrol
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇧🇷BR—BTC 360, ChatGPT
+CR: 3-4%
+PRICE: 650$+3% CRG
+
+🇵🇪 PE— OilProfit, BitcoinBillionaire
+CR: 2-3%
+PRICE: 600$+3% CRG
+
+🇭🇰HK (nat) — BitQT, QuantumAI, ChatGPT, Immediate momentum 
+CR: 8%
+PRICE: 800$+8%
+
+🇨🇿CZ (nat)— BitIQ, BitQT,  Immediate Edge,  Immediate Matrix, Immutable Investic, Unipetrol 
+CR: 7%
+PRICE: 900+7% CRG
+
+🇸🇬SG /🇲🇾MY  (en) — Immediate Apex, Tesler, Immediate Edge, Amazon, BtcBillionaire, QuantumAI, BitQT, Btc360AI
+CR: 8%
+PRICE: 900$+8% CRG
+
+🇧🇪BE (fr) — Immediate Edge, Quantum, BTC360 AI, BitSoft, QuantumAI, Tesler, BitiCodes
+CR: 8-10%
+PRICE: 1000$ + 9%
+
+🇫🇷FR(nat) —Immediate Edge, Quantum, BTC360 AI, BitSoft, QuantumAI, Tesler, BitiCodes, trading AI
+CR: 7%
+PRICE: 900$+7% CRG
+
+🇵🇱PL(nat)— Immediate Edge, MOL Group 2.0, MOL Group, WhatsApp Bot, Btc360, MetaMusk, Orlen, BalticPipe
+CR: 6-8%
+PRICE: 850$+7%
+
+🇦🇺AU — Immediate Apex, Tesler, Immediate Edge, Amazon, BtcBillionaire, QuantumAI, BitQT, Btc360AI
+CR: 9%
+PRICE: 950$+9% CRG
+
+Partner: Rayzone
+NZ
+1200+11%
+FB Traffic
+Finance Phantom , Finance Legend App , Orb Profit AI 
+
+UK
+1200+12%
+FB Traffic
+Finance Phantom , Finance Legend App , Orb Profit AI 
+
+UK
+1250+10%
+Google DV 360
+Immediate Peak Trading , AI Invest
+
+MY eng
+1200+8%
+FB Traffic
+Finance Phantom , Finance Legend App , Orb Profit AI
+
+PT
+1100+10%
+FB Traffic
+Immediate Bitwave
+
+KR
+1200+10%
+FB Traffic
+Finance Phantom , Finance Legend App , Orb Profit A
+
+NZ
+1200+12%
+FB Traffic
+Finance Phantom 
+
+UK
+1200+11%
+FB Traffic
+Finance Phantom
+
+BE-fr
+1300+12%
+FB Traffic
+Finance Phantom
+
+UK
+1200+11%
+FB Traffic
+Finance Phantom Bot, Finance Phantom AI
+
+PT
+1100+10%
+FB Traffic
+Finance Phantom Bot, Finance Phantom AI
+
+NZ
+1200+12%
+FB Traffic
+Finance Phantom Bot, Finance Phantom AI
+
+NL native
+1300+12%
+FB Traffic
+Finance Phantom Bot, Finance Phantom AI
+
+SE native
+1300+12%
+FB Traffic
+Finance Phantom Bot, Finance Phantom AI
+
+Partner: TokoMedia
+Country : FR
+Source : Bing+Google
+Funnels : AI + Immediate related funnels.
+Price : 900+10%
+
+Country : BE fr
+Source : Facebook+Google
+Funnels : Immediate Ai.
+Price : 1250+13%
+
+Geo : CA
+Source : Bing+Seo
+Funnels : Cyber Starus Ai , Vortex Echo Ai.
+Price : 1200+12%
+
+Geo : UK
+Source : Bing
+Funnels : Wealth Catalyst AI.
+Price : 1150+10%
+
+Geo : UK
+Source : Google Seo
+Funnels : Ai / Immediate related.
+Price : 1150+12%
+
+Geo : AT
+Source : FB+Google
+Funnels : AI / BTC/ Immediate related.
+Price : 1250+15%
+
+Country : CZ
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+12%
+
+Country : HR
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+10%
+
+Country : HU
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 950+8%
+
+Country : SK
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+10%
+
+Country : SL
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+10%
+
+Country : NZ
+Source : Facebook+SEO
+Funnels : Mostly -  Phantom Finance, Ai/BTC/Immediate related.
+Price : 1175+12%
+
+Country : AU
+Source : Bing+Google
+Funnels : Wealth Catalyst AI, AI Invest.
+Price : 1200+15%
+
+Country : AU
+Source : FB
+Funnels : The Quantum Ai , Bitcoin Ai.
+Price : 1250+10%
+
+Country : GR
+Source : Google
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 950+8%
+
+Geo : IT
+Source : FB
+Funnels : Bitcoin Ai , Immediate Con.
+Price : 1200+13%
+
+Geo : ES
+Source : FB+Google
+Funnels : Bitcoin Ai / Millunero , Immediate Con , AI Trading.
+Price : 1200+12%
+
+Country : PT
+Source : Google
+Funnels : Bitcoin Ai .
+Price : 1100 + 10%
+
+Country : SE
+Source : Facebook+Seo
+Funnels : BTC/ Ai / Immediate related.
+Price : 1250+15%
+
+Country : DK
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1250+15%
+
+Country : NL
+Source : Google Display + Google Seo
+Funnels : Mostly - Immediate Ai .
+Price : 1200 + 15%
+
+Country : FI
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1250 + 15%
+
+Country : IE
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1200 + 13%
+
+Country : BR
+Source : Bing
+Impuls Pro AI , Fortuna Crescente Oil AI , Vortice Ethreum.
+Price : 600 + 5%
+
+Geo : ZA ( Mix - Whites + Black )
+Source : Bing+Seo
+Funnels : AI + Immediate related funnels.
+Price : 550+4%
+
+Geo : MY
+Source : Bing+Seo
+Funnels : Cyber Starus Ai , Vortex Echo Ai.
+Price : 1000+11% or 1100+10%
+
+Geo : ID
+Source : Bing+Seo
+Funnels : Cyber Straus Ai , Vortex Echo Ai.
+Price : 650+5%
+
+Geo : PH
+Source : Bing+Seo
+Funnels : Cyber Straus Ai , Vortex Echo Ai.
+Price : 650+5%
+
+Geo : DE
+Source : Google DV 360
+Funnels : Bitcoin Vista ( might change on the campaign morning )
+Price : 1200+20%
+
+Geo : UK
+Source : Google DV 360
+Funnels : Immediate Peak Trading , AI Invest.
+Price : 1150+10%
+
+Geo : UK
+Source : Google DV 360
+Funnels : Immediate Peak Trading, AI Invest.
+Price : 1150+10%
+
+Geo : UK
+Source : Bing
+Funnels : Wealth Catalyst AI.
+Price : 1150+10%
+
+Geo : DE
+Source : Bing+Google
+Funnels : AI + Immediate + BTC related funnels.
+Price : 1400+20%
+
+Geo : DE
+Source : Google DV 360
+Funnels : Bitcoin Vista ( might change on the campaign morning )
+Price : 1200+20%
+
+Country : FR
+Source : Bing+Google
+Funnels : AI + Immediate related funnels.
+Price : 900+10%
+
+Country : BE fr
+Source : Facebook+Google
+Funnels : Immediate AI , AI Trading.
+Price : 1200+13% or 1250+12%
+
+Geo : CA
+Source : Bing+Seo
+Funnels : Wealth Catalyst AI.
+Price : 1200+12%
+
+Geo : UK
+Source : Bing
+Funnels : Wealth Catalyst AI.
+Price : 1150+10%
+
+Geo : UK
+Source : Google Seo
+Funnels : Ai / Immediate related.
+Price : 1150+12%
+
+Geo : AT
+Source : FB+Google
+Funnels : AI / BTC/ Immediate related.
+Price : 1250+15%
+
+Geo : DE
+Source : Bing+Google
+Funnels : AI + Immediate + BTC related funnels.
+Price : 1400+20%
+
+Country : CZ
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+12%
+
+Country : HR
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+10%
+
+Country : HU
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+8%
+
+Country : SK
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1050+10%
+
+Country : SL
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+10%
+
+Country : NZ
+Source : Facebook+SEO
+Funnels : Mostly -  Phantom Finance, Ai/BTC/Immediate related.
+Price : 1200+12%
+
+Country : AU
+Source : Bing+Google
+Funnels : Wealth Catalyst AI , AI Invest.
+Price : 1250+15%
+
+Country : AU
+Source : FB
+Funnels : The Quantum Ai , Bitcoin Ai.
+Price : 1250+11%
+
+Country : GR
+Source : Google
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 950+8%
+
+Geo : IT
+Source : FB
+Funnels : Bitcoin Ai , Immediate Con.
+Price : 1200+13%
+
+Geo : ES
+Source : FB+Google
+Funnels : Mostly - Bitcoin Ai / Millunero , Immediate Con , AI Trading.
+Price : 1200+12%
+
+Country : PT
+Source : Google
+Funnels : Bitcoin Ai .
+Price : 1100 + 10%
+
+Country : NO
+Source : Facebook+Seo
+Funnels : BTC/ Ai / Immediate related.
+Price : 1250+15%
+
+Country : SE
+Source : Facebook+Seo
+Funnels : BTC/ Ai / Immediate related.
+Price : 1250+15%
+
+Country : DK
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1250+15%
+
+Country : FI
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1250 + 15%
+
+Country : NL
+Source : Google Display + Google Seo
+Funnels : Mostly - Immediate Ai .
+Price : 1200 + 15%
+
+Country : IE
+Source : Facebook+Seo
+Funnels : BTC / Ai / Immediate related.
+Price : 1200 + 13%
+
+Country : BR
+Source : Bing
+Impuls Pro AI , Fortuna Crescente Oil AI , Vortice Ethreum.
+Price : 600 + 5%
+
+Geo : ZA ( Mix - Whites + Black )
+Source : Bing+Seo
+Funnels : Mostly - AI + Immediate related funnels.
+Price : 550+4%
+
+Geo : DE
+Source : Google DV 360
+Funnels : Bitcoin Vista ( might change on the campaign morning )
+Price : 1200+20%
+
+Geo : UK
+Source : Google DV 360
+Funnels : Immediate Peak Trading , AI Invest.
+Price : 1150+10%
+
+Geo : BE nl/en
+Source : Google Seo
+Funnels : AI + Immediate + BTC related.
+Price : 1300+15%
+
+Tommy Tokomedia, [Oct 16, 2024 at 3:59:05 PM]:
+Country : BR
+Source : Bing
+Impuls Pro AI , Fortuna Crescente Oil AI , Vortice Ethreum.
+Price : 600 + 5%
+Doing 4% +
+
+Country : FR
+Source : Bing+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 900+10%
+
+Country : BE fr
+Source : Facebook+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1250+13%
+
+Country : CA fr
+Source : Facebook+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1250+8%
+
+Geo : CA
+Source : Bing+Seo
+Funnels : Crimson Flux AI
+Price : 1150+12%
+
+Geo : UK
+Source : Bing
+Funnels : Crimson Flux AI
+Price : 1150+10%
+
+Geo : UK
+Source : Google Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1150+12%
+
+Geo : AT
+Source : FB+Google Seo
+Funnels : AI + BTC + Immediate related.
+Price : 1350+15%
+
+Geo : DE
+Source : Bing+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1400+20%
+
+Country : CZ
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+12%
+
+Country : HR
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+10%
+
+Country : HU
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+8%
+
+Country : SK
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1050+10%
+
+Country : SL
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+10%
+
+Country : NZ
+Source : Facebook
+Funnels : Mostly -  Phantom Finance
+Price : 1175+12%
+
+Country : AU
+Source : Bing+Google
+Funnels : Crimson Flux AI , AI Invest.
+Price : 1200+15%
+
+Country : AU
+Source : FB
+Funnels : The Quantum Ai.
+Price : 1250+12%
+
+Country : GR
+Source : Google
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 950+8%
+
+Geo : IT
+Source : FB
+Funnels : Bitcoin Ai , Immediate Con.
+Price : 1200+13%
+
+Geo : ES
+Source : FB+Google
+Funnels : Mostly - Bitcoin Ai / Millunero , Immediate Con , AI Trading.
+Price : 1150+12%
+
+Country : PT
+Source : Google
+Funnels : Bitcoin Ai .
+Price : 1100 + 10%
+
+Country : NO
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300+15%
+
+Country : SE
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300+15%
+
+Country : DK
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300+15%
+
+Country : FI
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300 + 15%
+
+Country : NL
+Source : Google Display + Google Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1250 + 13%
+
+Country : IE
+Source : Facebook+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1200 + 13%
+
+Country : BR
+Source : Bing + Google
+Impuls Pro AI , Fortuna Crescente Oil AI , Vortice Ethreum.
+Price : 600 + 5%
+
+Geo : ZA ( Mix - Whites + Black )
+Source : Bing+Seo
+Funnels : mostly -  AI + Immediate related funnels.
+Price : 550+4%
+
+Geo : JP
+Source : FB+Google
+Funnels : Bitcoin AI
+Price : 1250+12%
+
+Geo : DE
+Source : Google DV 360
+Funnels : Bitcoin Vista ( might change on the campaign morning )
+Price : 1200+20%
+
+Geo : UK
+Source : Google DV 360
+Funnels : Immediate Peak Trading , AI Invest.
+Price : 1150+10%
+
+Country : FR
+Source : Bing+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 900+10%
+
+Country : BE fr
+Source : Facebook+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1250+13%
+
+Country : CA fr
+Source : Facebook+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1200+8%
+
+Geo : CH de
+Source : Bing/Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1450+20%
+
+Geo : CA
+Source : Bing+Seo
+Funnels : Crimson Flux AI
+Price : 1150+12%
+
+Geo : UK
+Source : Bing
+Funnels : Crimson Flux AI , AI Trader.
+Price : 1150+10%
+
+Geo : UK
+Source : Google Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1150+12%
+
+Geo : AT
+Source : FB+Google Seo
+Funnels : AI + BTC + Immediate related.
+Price : 1350+15%
+
+Geo : DE
+Source : Bing+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1400+20%
+
+Country : CZ
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+12%
+
+Country : HR
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1100+10%
+
+Country : HU
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+8%
+
+Country : SK
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1050+10%
+
+Country : SL
+Source : Google+FB
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 1000+10%
+
+Country : NZ
+Source : Facebook
+Funnels : Mostly -  Phantom Finance
+Price : 1175+12%
+
+Country : AU
+Source : Bing+Google
+Funnels : Crimson Flux AI , AI Invest.
+Price : 1200+15%
+
+Country : AU
+Source : FB
+Funnels : The Quantum Ai.
+Price : 1250+10%
+
+Country : GR
+Source : Google
+Funnels : Ai Trading , Bitcoin Ai , Immediate Con.
+Price : 950+8%
+
+Geo : IT
+Source : FB
+Funnels : Bitcoin Ai , Immediate Con.
+Price : 1175+13%
+
+Geo : ES
+Source : FB+Google
+Funnels : Mostly - Bitcoin Ai / Millunero , Immediate Con , AI Trading.
+Price : 1200+11%
+
+Country : PT
+Source : Google
+Funnels : Bitcoin Ai .
+Price : 1100 + 10%
+
+Country : NO
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300+15%
+
+Country : SE
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300+15%
+
+Country : DK
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300+15%
+
+Country : FI
+Source : Facebook+Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1300 + 15%
+
+Country : NL
+Source : Google Display + Google Seo
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1250 + 13%
+
+Country : IE
+Source : Facebook+Google
+Funnels : AI + BTC + Immediate related funnels.
+Price : 1200 + 13%
+
+Country : BR
+Source : Bing + Google
+Impuls Pro AI , Fortuna Crescente Oil AI , Vortice Ethreum.
+Price : 600 + 5%
+
+Geo : ZA ( Mix - Whites + Black )
+Source : Bing+Seo
+Funnels : mostly -  AI + Immediate related funnels.
+Price : 550+4%
+
+Geo : JP
+Source : FB+Google
+Funnels : AI + Immediate + BTC related.
+Price : 1250+12%
+
+Geo : DE
+Source : Google DV 360
+Funnels : Bitcoin Vista ( might change on the campaign morning )
+Price : 1200+20%
+
+Geo : UK
+Source : Google DV 360
+Funnels : Immediate Peak Trading , AI Invest.
+Price : 1150+10%
