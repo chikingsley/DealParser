@@ -29,13 +29,20 @@ def main():
     # Create application
     application = Application.builder().token(token).build()
 
-    # Add handlers
+    # Initialize message handler
     message_handler = MessageHandler()
+
+    # Add handlers
     application.add_handler(
         TelegramMessageHandler(
             filters.TEXT & ~filters.COMMAND, 
             message_handler.handle_message
         )
+    )
+    
+    # Add callback handler - this is what handles button presses
+    application.add_handler(
+        CallbackQueryHandler(message_handler.handle_callback)
     )
 
     # Start the bot

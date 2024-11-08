@@ -84,6 +84,18 @@ class Deal(BaseModel):
         )
         return hashlib.md5(deal_string.encode()).hexdigest()
 
+    @validator('cpa')
+    def validate_cpa(cls, v):
+        if v is not None and v <= 0:
+            raise ValueError("CPA must be positive")
+        return v
+        
+    @validator('crg')
+    def validate_crg(cls, v):
+        if v is not None and not 0 <= v <= 1:
+            raise ValueError("CRG must be between 0 and 1")
+        return v
+
 class DealProcessor:
     def __init__(self):
         self.db_path = Path("data/deals.db")
@@ -257,3 +269,16 @@ class DealProcessor:
                         result["created_at"] = row[14]  # created_at column
                 
         return result
+
+class DealStorage:
+    def __init__(self):
+        self.db_path = Path("data/deals.db")
+        self._init_db()
+        
+    def save_deal_status(self, deal_id: str, status: str, user_id: int):
+        """Save deal approval status"""
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute(
+                "INSERT INTO deal_status (deal_id, status, user_id) VALUES (?, ?, ?)",
+                (deal_id, status, user_id)
+            )
