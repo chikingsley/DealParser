@@ -1,9 +1,10 @@
-python-telegram-bot>=20.0
-python-dotenv>=1.0.0
-pydantic>=2.5.0
-mistralai>=0.0.7
-rich>=13.0.0
+python-telegram-bot
+python-dotenv
+pydantic
+mistralai
+rich
+transformers
 # Optional utilities
-aiohttp>=3.9.3
-typing-extensions>=4.10.0
-flask>=2.0.0
+aiohttp
+typing-extensions
+flask
