@@ -1,31 +1,45 @@
 from typing import List, Dict
 import json
 
-STRUCTURE_ANALYSIS_PROMPT = """Analyze the structure of deal text and identify shared fields. Pay special attention to these structure types:
+STRUCTURE_ANALYSIS_PROMPT = """Analyze the structure of deal text and identify shared fields. A field is considered shared when it applies to ALL deals in the text.
 
-1. Single Line, Single Deal:
-Example: "AU - 1300+13% - Beatskai iq (fb)"
+Key Rules for Shared Fields:
+1. Partner is shared when:
+   - It appears at the start with "Partner:" or "Company:" and applies to all following deals
+   - It's mentioned once and clearly applies to multiple deals
+2. Language is shared when:
+   - It's specified once at the top level (e.g., "ENG speaking", "NATIVE speaking")
+   - It applies consistently across all deals
+3. Source is shared when:
+   - It's specified once for all deals (e.g., "source: fb" at top)
+4. Model is shared when:
+   - It's specified once and applies to all deals (e.g., "model: cpa+crg")
+5. Deduction Limit is shared when:
+   - It appears at the bottom (e.g., "all campaigns are until 5% wrong number")
+   - It's specified as a global limit (e.g., "until 5% wrong number")
 
-2. Multi-Line, Single Deal:
-Example: 
-"Partner: Sutra
-AU - 1300+13% - Beatskai iq (fb)"
+Examples of Shared Fields:
+1. "Partner: Sutra
+    AU - 1300+13%
+    US - 1400+15%"
+    → Partner "Sutra" is shared
 
-3. Multi-Line, Multiple Deals:
-Example:
-"Partner: Sutra
-GT - 600+2% - Oil Profit
-Partner: AffGenius
-RO - 1000 + 10% - Immediate funnels (fb)"
+2. "Language: Native
+    Partner: Deum
+    NO - 1200+10%
+    FI - 1200+10%"
+    → Both "Language" and "Partner" are shared
 
-4. Multi-Line, Multi-Geo Single Deal:
-Example:
-"Partner: Deum
-ENG EU (t1) / Nordic pull 
-NO FI IE SE CH DK BE NL
-model: cpa+crg  
-price: $1200+10%
-source: fb"
+3. "Company: FTD Company
+    🇩🇪DE(nat) — Oil Profit, Bitcoin 360 Ai"
+    → Company/Partner is shared
+
+4. "ENG speaking
+    Partner: Deum"
+    → Language is shared
+
+5. "all campaigns are until 5% wrong number"
+    → Deduction limit is shared
 
 Return this analysis as JSON:
 {
@@ -34,13 +48,14 @@ Return this analysis as JSON:
         "partner": "string or null",
         "language": "string or null",
         "source": "string or null",
-        "model": "string or null"
+        "model": "string or null",
+        "deduction_limit": "string or null"
     },
     "deal_count": number,
     "deal_blocks": [
         {
             "text": "raw text for this deal",
-            "inherits_from": ["partner", "language", etc]
+            "inherits_from": ["partner", "language", "deduction_limit", etc]
         }
     ]
 }"""

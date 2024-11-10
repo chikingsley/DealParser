@@ -308,3 +308,26 @@ class TrainingDealParser:
         if limit_match:
             return float(limit_match.group(1)) / 100
         return None
+
+    def _extract_language(self, text: str) -> str:
+        """Extract language from text"""
+        text = text.lower()
+        
+        # Check explicit language field
+        lang_match = re.search(r'(?:language|speaking):\s*([^:\n]+)', text, re.IGNORECASE)
+        if lang_match:
+            lang_text = lang_match.group(1).lower().strip()
+            for code, lang in self.LANGUAGE_MAPPINGS.items():
+                if code in lang_text:
+                    return lang
+                    
+        # Check language codes in text
+        for code, lang in self.LANGUAGE_MAPPINGS.items():
+            if f" {code} " in f" {text} ":
+                return lang
+                
+        # Check for native indicators
+        if any(x in text.lower() for x in ['nat', '(nat)', 'native']):
+            return 'Native'
+            
+        return 'Native'  # Default
