@@ -1,0 +1,949 @@
+{
+    "object": "database",
+    "id": "11b0e615-9a90-80e3-9356-fa80451493b9",
+    "cover": {
+        "type": "external",
+        "external": {
+            "url": "https://www.notion.so/images/page-cover/woodcuts_14.jpg"
+        }
+    },
+    "icon": {
+        "type": "emoji",
+        "emoji": "⭐"
+    },
+    "created_time": "2024-10-10T07:09:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "b6359363-c427-404b-a207-677134293ec6"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "b6359363-c427-404b-a207-677134293ec6"
+    },
+    "last_edited_time": "2024-11-10T18:28:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "ALL DEALS | Kitchen",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "ALL DEALS | Kitchen",
+            "href": null
+        }
+    ],
+    "description": [
+        {
+            "type": "text",
+            "text": {
+                "content": "🔴 Deal changed 🟡 Network 🟢 Brand 🟣 Network include fee in the CPA Price\n",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "🔴 Deal changed 🟡 Network 🟢 Brand 🟣 Network include fee in the CPA Price\n",
+            "href": null
+        }
+    ],
+    "is_inline": false,
+    "properties": {
+        "Multiple Integrations": {
+            "id": "%3Astq",
+            "name": "Multiple Integrations",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "Buying CPA": {
+            "id": "%3EY%3Ei",
+            "name": "Buying CPA",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "CPA | Buying",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "<YOL",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "Leads Recieved": {
+            "id": "%3EuMz",
+            "name": "Leads Recieved",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Buying CPL": {
+            "id": "%3FgfX",
+            "name": "Buying CPL",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "CPL | Buying",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "n<IF",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "Funnels": {
+            "id": "%3Fyux",
+            "name": "Funnels",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Funnels",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "uaIg",
+                "relation_property_id": "Y^De",
+                "function": "show_unique"
+            }
+        },
+        "Priority": {
+            "id": "%40_qO",
+            "name": "Priority",
+            "type": "select",
+            "select": {
+                "options": [
+                    {
+                        "id": "28b2595a-799f-49dc-ae60-5f79cf4cabcd",
+                        "name": "P4",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "l{An",
+                        "name": "P3",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "krFX",
+                        "name": "P2",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "mDcG",
+                        "name": "P1",
+                        "color": "red",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "buying cpl for text": {
+            "id": "%40viw",
+            "name": "buying cpl for text",
+            "type": "formula",
+            "formula": {
+                "expression": "first({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Deal Status": {
+            "id": "%40%7Bu%7B",
+            "name": "Deal Status",
+            "type": "select",
+            "select": {
+                "options": [
+                    {
+                        "id": "c736a206-9858-4dd3-b08c-042746a8bf00",
+                        "name": "✅ Approved",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "b8f796ce-2b35-4e55-852d-17be9cefec13",
+                        "name": "Waiting final CAP confirmation with supplier",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "5d233345-ca98-4f88-a512-a92b1ff70cc8",
+                        "name": "💸 KitchenAds Prepay",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "e79cb806-626b-4f2e-8b80-a20d525230ff",
+                        "name": "⏰Waiting Prepay - PreCon Sent",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "1094ae64-2952-48af-a87c-2e779b9cc1cd",
+                        "name": "⚡️ Waiting KitchenAds Approval",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "c8d04ce6-daaf-41f8-97ec-d0f8c7ea69e3",
+                        "name": "👀 Checking Advertiser Availability",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "52c4de70-5671-46d6-8bae-06102f860e44",
+                        "name": "🎆 Waiting Brand Confirm Interest",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "39e1c3b7-7d5a-4297-bef6-d72e76786d16",
+                        "name": "🤑 Negotiating",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "dfe962b1-02e9-41bc-8f9d-e4e3909544f8",
+                        "name": "❌ Not Approved - Price",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "3edf8a7d-9fc9-4897-b768-2e5cefafc5fe",
+                        "name": "❌ Not Approved - Other",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "f07aff8a-b39a-451b-adaf-34bb1079eb00",
+                        "name": "❌ Not Available",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "479a808b-14fa-40b8-9ee1-276f8bcbf5f6",
+                        "name": "❌ Cancelled - Refund",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "e67f4b6e-2da1-42e8-9401-dca6b251766b",
+                        "name": "❌ No Deal Negotiated",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "3ec4723c-ccd2-4585-bfd9-42e711b446b7",
+                        "name": "❌ Feedback/Lates",
+                        "color": "red",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "Sources API": {
+            "id": "AnQk",
+            "name": "Sources API",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:%60nJ%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "main brand contacts": {
+            "id": "B%3BO%5C",
+            "name": "main brand contacts",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:SgE%5C:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "WH Start": {
+            "id": "B%3B~F",
+            "name": "WH Start",
+            "type": "date",
+            "date": {}
+        },
+        "Final Deduction %": {
+            "id": "CI%5BL",
+            "name": "Final Deduction %",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Final Deduction %",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "[fiW",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "ADVERTISER GROUP Deal Text": {
+            "id": "C%5D%3BE",
+            "name": "ADVERTISER GROUP Deal Text",
+            "type": "formula",
+            "formula": {
+                "expression": "\"💼 \"+{{notion:block_property:YHlZ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" || CONFIRMED Deal for \" + formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \"dddd MMM D\") +\"\\n--\\n\"+\n {{notion:block_property:Hlhk:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" \"+{{notion:block_property:kxQc:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+ \" [\" + {{notion:block_property:%60nJ%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"] \" + \nif(\n    not {{notion:block_property:J_%3CJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\n    if(\n        empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n        (\n            format({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \"+\" + format(first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) * 100) + \"%\\n\"\n        ),\n        format({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \" CPL\\n\"\n    ),\n    if(\n        empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n        (\n            {{notion:block_property:D%5E%7CR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"+\" + format({{notion:block_property:M%3Df~:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} * 100) + \"%\\n\"\n        ),\n        {{notion:block_property:ll%3BB:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\\n\"\n    )\n) +\n\"Funnels: \" + join({{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \", \") + \"\\n\" +\nformat({{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \" Leads → \" + {{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "Prepay Owed (no fee)": {
+            "id": "DLSM",
+            "name": "Prepay Owed (no fee)",
+            "type": "formula",
+            "formula": {
+                "expression": "if(contains({{notion:block_property:s%3F%60e:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"No\"),\"\",if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),{{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:QfRf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},{{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}))"
+            }
+        },
+        "Updated Buying CPA": {
+            "id": "D%5E%7CR",
+            "name": "Updated Buying CPA",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Deal Date": {
+            "id": "DnXL",
+            "name": "Deal Date",
+            "type": "date",
+            "date": {}
+        },
+        "box set": {
+            "id": "EHrF",
+            "name": "box set",
+            "type": "select",
+            "select": {
+                "options": [
+                    {
+                        "id": "~StW",
+                        "name": "✅",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "eff85c77-5325-4332-8992-48b2ba6bd68a",
+                        "name": "❌",
+                        "color": "red",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "crg charge": {
+            "id": "Gfyq",
+            "name": "crg charge",
+            "type": "formula",
+            "formula": {
+                "expression": "if(contains({{notion:block_property:s%3F%60e:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"No\"),\"\",{{notion:block_property:%3EuMz:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:QfRf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}-{{notion:block_property:Lw%3Ae:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "geo": {
+            "id": "Hlhk",
+            "name": "geo",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "GEO",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "{kQ~",
+                "relation_property_id": "Y^De",
+                "function": "show_unique"
+            }
+        },
+        "Customer Payment Fee": {
+            "id": "IvtX",
+            "name": "Customer Payment Fee",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Payment Fee",
+                "relation_property_name": "™️ ALL CUSTOMERS",
+                "rollup_property_id": "LcbP",
+                "relation_property_id": "gzeR",
+                "function": "show_original"
+            }
+        },
+        "Buying Price Updated": {
+            "id": "J_%3CJ",
+            "name": "Buying Price Updated",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "use alt funnel": {
+            "id": "Ja%3FJ",
+            "name": "use alt funnel",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "WH End": {
+            "id": "JpDX",
+            "name": "WH End",
+            "type": "date",
+            "date": {}
+        },
+        "Prepay Received": {
+            "id": "J%7Czs",
+            "name": "Prepay Received",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "negotiation deal text": {
+            "id": "KU%3DP",
+            "name": "negotiation deal text",
+            "type": "formula",
+            "formula": {
+                "expression": "\"[\" + join({{notion:block_property:%60nJ%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \", \") + \"] \" + \" \" + if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), {{notion:block_property:k%3Eo%60:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, {{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\") + \"\\nFunnels: \" + join(if(empty({{notion:block_property:Ja%3FJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), {{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, {{notion:block_property:rR~%5B:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \", \") + \"\\n\" + if(empty({{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \"\", {{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" Leads → \" + {{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "CR": {
+            "id": "Lcfj",
+            "name": "CR",
+            "type": "formula",
+            "formula": {
+                "expression": "if(contains({{notion:block_property:s%3F%60e:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"No\"),\"\",round(({{notion:block_property:Lw%3Ae:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}/{{notion:block_property:%3EuMz:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})*100)/100)"
+            }
+        },
+        "FTDs": {
+            "id": "Lw%3Ae",
+            "name": "FTDs",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Updated Buying CRG": {
+            "id": "M%3Df~",
+            "name": "Updated Buying CRG",
+            "type": "number",
+            "number": {
+                "format": "percent"
+            }
+        },
+        "buying deal ": {
+            "id": "Mgh%5C",
+            "name": "buying deal ",
+            "type": "formula",
+            "formula": {
+                "expression": "\n\n{{notion:block_property:YHlZ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+ \" [\" + {{notion:block_property:%60nJ%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"] \" + \nif(\n    not {{notion:block_property:J_%3CJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\n    if(\n        empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n        (\n            format({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \"+\" + format(first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) * 100) + \"%\\n\"\n        ),\n        format({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \" CPL\\n\"\n    ),\n    if(\n        empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n        (\n            {{notion:block_property:D%5E%7CR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"+\" + format({{notion:block_property:M%3Df~:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} * 100) + \"%\\n\"\n        ),\n        {{notion:block_property:ll%3BB:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\\n\"\n    )\n) +\"Funnels: \" + join({{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \", \")"
+            }
+        },
+        "Geo API2": {
+            "id": "NFvi",
+            "name": "Geo API2",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "PPL": {
+            "id": "NM%5Da",
+            "name": "PPL",
+            "type": "formula",
+            "formula": {
+                "expression": "if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n\t({{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:QfRf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}-first({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})*first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})),\n\t({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}-first({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})))"
+            }
+        },
+        "buying deal (for text)": {
+            "id": "N%60rB",
+            "name": "buying deal (for text)",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "for buying text gen",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "aFJM",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "Date for CAP == Tomorrow": {
+            "id": "P%3A%7C%5C",
+            "name": "Date for CAP == Tomorrow",
+            "type": "formula",
+            "formula": {
+                "expression": "if(formatDate(dateAdd((now()),1,\"days\"), \"MMMM D, Y\")==formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \"MMMM D, Y\"),\"yes\",\"no\")"
+            }
+        },
+        "buying crg for text": {
+            "id": "P%3C%7BU",
+            "name": "buying crg for text",
+            "type": "formula",
+            "formula": {
+                "expression": "first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "all brands API2": {
+            "id": "Pm%3E%3B",
+            "name": "all brands API2",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "Balance Left": {
+            "id": "P~rR",
+            "name": "Balance Left",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:DLSM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}-({{notion:block_property:%60%3FsJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+(if(\n\t({{notion:block_property:Gfyq:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})<0,\"\",{{notion:block_property:Gfyq:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})))"
+            }
+        },
+        "CRG": {
+            "id": "QfRf",
+            "name": "CRG",
+            "type": "number",
+            "number": {
+                "format": "percent"
+            }
+        },
+        "Date for CAP == Yesterday": {
+            "id": "QzK_",
+            "name": "Date for CAP == Yesterday",
+            "type": "formula",
+            "formula": {
+                "expression": "if(formatDate(dateSubtract((now()),1,\"days\"), \"MMMM D, Y\")==formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \"MMMM D, Y\"),\"yes\",\"no\")"
+            }
+        },
+        "CPL": {
+            "id": "Q%7Baf",
+            "name": "CPL",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Advertisers (for Text)": {
+            "id": "RNMY",
+            "name": "Advertisers (for Text)",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "⚡ ALL ADVERTISERS | Kitchen",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "oLx`",
+                "relation_property_id": "Y^De",
+                "function": "show_unique"
+            }
+        },
+        "cap": {
+            "id": "ROrm",
+            "name": "cap",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "main contacts brand": {
+            "id": "SgE%5C",
+            "name": "main contacts brand",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Main Telegram",
+                "relation_property_name": "™️ ALL CUSTOMERS",
+                "rollup_property_id": "HFxa",
+                "relation_property_id": "gzeR",
+                "function": "show_original"
+            }
+        },
+        "brand [caps]": {
+            "id": "TpGB",
+            "name": "brand [caps]",
+            "type": "formula",
+            "formula": {
+                "expression": "format({{notion:block_property:gzeR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})+\" [\" + {{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} +\"]\""
+            }
+        },
+        "geo api": {
+            "id": "UQ%60D",
+            "name": "geo api",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:Ja%3FJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "WH": {
+            "id": "Vk%60%5D",
+            "name": "WH",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "deal date for bill": {
+            "id": "VwTh",
+            "name": "deal date for bill",
+            "type": "formula",
+            "formula": {
+                "expression": "formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"MM-DD\")"
+            }
+        },
+        "Main Contact": {
+            "id": "XbtQ",
+            "name": "Main Contact",
+            "type": "formula",
+            "formula": {
+                "expression": "first({{notion:block_property:mTj%3C:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Advertiser": {
+            "id": "YHlZ",
+            "name": "Advertiser",
+            "type": "formula",
+            "formula": {
+                "expression": "replaceAll(replaceAll(format({{notion:block_property:RNMY:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \",Priority\", \"\"), \"Priority,\", \"\")"
+            }
+        },
+        "🥮 Individual OFFERS | Kitchen": {
+            "id": "Y%5EDe",
+            "name": "🥮 Individual OFFERS | Kitchen",
+            "type": "relation",
+            "relation": {
+                "database_id": "11b0e615-9a90-80ce-8fcd-f3d53053cf31",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "⭐ ALL DEALS | Kitchen",
+                    "synced_property_id": "hLKt"
+                }
+            }
+        },
+        "DATE==THIS WEEK": {
+            "id": "%5C%7BT~",
+            "name": "DATE==THIS WEEK",
+            "type": "formula",
+            "formula": {
+                "expression": "if({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} >= dateSubtract(dateSubtract(dateSubtract(now(), toNumber(formatDate(now(), \"d\")), \"days\"), toNumber(formatDate(now(), \"H\")), \"hours\"), toNumber(formatDate(now(), \"m\")), \"minutes\") and {{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} < dateAdd(dateSubtract(dateSubtract(dateSubtract(now(), toNumber(formatDate(now(), \"d\")), \"days\"), toNumber(formatDate(now(), \"H\")), \"hours\"), toNumber(formatDate(now(), \"m\")), \"minutes\"), 7, \"days\"), true, false)\n"
+            }
+        },
+        "🟡": {
+            "id": "%5DNrv",
+            "name": "🟡",
+            "type": "formula",
+            "formula": {
+                "expression": "format({{notion:block_property:gzeR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})+\"-\"+formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"MM/DD\")"
+            }
+        },
+        "integrations": {
+            "id": "%5Ey%5Eg",
+            "name": "integrations",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Integrations",
+                "relation_property_name": "™️ ALL CUSTOMERS",
+                "rollup_property_id": "?jD;",
+                "relation_property_id": "gzeR",
+                "function": "show_original"
+            }
+        },
+        "PPL%": {
+            "id": "%60%3E%3A%3A",
+            "name": "PPL%",
+            "type": "formula",
+            "formula": {
+                "expression": "round({{notion:block_property:k%7Dlc:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*1000)/1000"
+            }
+        },
+        "ftd charge": {
+            "id": "%60%3FsJ",
+            "name": "ftd charge",
+            "type": "formula",
+            "formula": {
+                "expression": "if(contains({{notion:block_property:s%3F%60e:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"No\"),\"\",{{notion:block_property:Lw%3Ae:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Sources": {
+            "id": "%60nJ%5D",
+            "name": "Sources",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Sources",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "uvt=",
+                "relation_property_id": "Y^De",
+                "function": "show_unique"
+            }
+        },
+        "Previous Week": {
+            "id": "aDs%3B",
+            "name": "Previous Week",
+            "type": "formula",
+            "formula": {
+                "expression": "if({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} < dateSubtract(dateSubtract(dateSubtract(now(), toNumber(formatDate(now(), \"d\")), \"days\"), toNumber(formatDate(now(), \"H\")), \"hours\"), toNumber(formatDate(now(), \"m\")), \"minutes\") and {{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} >= dateSubtract(dateSubtract(dateSubtract(now(), toNumber(formatDate(now(), \"d\")) + 7, \"days\"), toNumber(formatDate(now(), \"H\")), \"hours\"), toNumber(formatDate(now(), \"m\")), \"minutes\"), true, false)"
+            }
+        },
+        "CPA": {
+            "id": "bZ%60W",
+            "name": "CPA",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Date for Cap == Today": {
+            "id": "dC%5CR",
+            "name": "Date for Cap == Today",
+            "type": "formula",
+            "formula": {
+                "expression": "now() > dateStart({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) and now() < dateEnd({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) or or(formatDate(now(), \"L\") == formatDate(dateStart({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \"L\"), formatDate(now(), \"L\") == formatDate(dateEnd({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \"L\"))"
+            }
+        },
+        "Brand (for text)": {
+            "id": "grGW",
+            "name": "Brand (for text)",
+            "type": "formula",
+            "formula": {
+                "expression": "last(split(format({{notion:block_property:title:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\"-\"))"
+            }
+        },
+        "™️ ALL CUSTOMERS": {
+            "id": "gzeR",
+            "name": "™️ ALL CUSTOMERS",
+            "type": "relation",
+            "relation": {
+                "database_id": "11b0e615-9a90-8038-a0f1-fb200379746f",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "⭐ ALL DEALS | Kitchen",
+                    "synced_property_id": "%3CPLi"
+                }
+            }
+        },
+        "Integration #": {
+            "id": "hR%7BW",
+            "name": "Integration #",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "BRAND GROUP pre deal text": {
+            "id": "iu%3AW",
+            "name": "BRAND GROUP pre deal text",
+            "type": "formula",
+            "formula": {
+                "expression": "format({{notion:block_property:gzeR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \" || Pre-Confirmed Deal for \" + formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"dddd MM/DD/YYYY\") \n+ \"\\n--\\n\" + \"[\" + join({{notion:block_property:%60nJ%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\", \")+\"] \" + {{notion:block_property:Ja%3FJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+ \" \" + if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),{{notion:block_property:k%3Eo%60:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},{{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\")+\n\"\\nFunnels: \" +join({{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\", \")\n+ \n\"\\n\"+ {{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" Leads → \" +{{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} +\n\"\\n\" + if(length(format({{notion:block_property:CI%5BL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})) > 0, \"\\n🚨 Campaign Deduction Allowance: \" + {{notion:block_property:CI%5BL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"%\", \"\") + \n\"\\n\\n🚨 Deal will be confirmed after POP confirmed by our finance\""
+            }
+        },
+        "🟣": {
+            "id": "jVZ%3E",
+            "name": "🟣",
+            "type": "formula",
+            "formula": {
+                "expression": "formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"MM/DD\")+\"-\"+format({{notion:block_property:Y%5EDe:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Full Deal (CPA + CG)": {
+            "id": "k%3Eo%60",
+            "name": "Full Deal (CPA + CG)",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + if(empty({{notion:block_property:QfRf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\" CPA\",\" + \" + ({{notion:block_property:QfRf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*100) +\"%\")"
+            }
+        },
+        "BRAND GROUP confirmed deal text": {
+            "id": "kAAN",
+            "name": "BRAND GROUP confirmed deal text",
+            "type": "formula",
+            "formula": {
+                "expression": "\"🟢 \"+format({{notion:block_property:gzeR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})+\" (\"+{{notion:block_property:kv%5CC:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \") || Confirmed Deal for \" + formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"dddd MMM D\") + \"\\n--\\n\" + {{notion:block_property:Hlhk:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" \"+{{notion:block_property:kxQc:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+ \" [\" + join({{notion:block_property:AnQk:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\", \")+\"] \" + if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),{{notion:block_property:k%3Eo%60:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},{{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\")+\"\\nFunnels: \" +join(if(empty({{notion:block_property:Ja%3FJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), {{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, {{notion:block_property:rR~%5B:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \", \") +\"\\n\"+ {{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" Leads → \" +{{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \n\"\\n\" + if(length(format({{notion:block_property:CI%5BL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})) > 0, \"\\n🚨 Campaign Deduction Allowance: \" + {{notion:block_property:CI%5BL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"%\", \"\")"
+            }
+        },
+        "Bill ID Checker": {
+            "id": "kreN",
+            "name": "Bill ID Checker",
+            "type": "formula",
+            "formula": {
+                "expression": "if(\n  {{notion:block_property:SQfl:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} == {{notion:block_property:zYr%5C:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\n  \"✅ Bill ID Correct\",\n  if(\n    contains(format({{notion:block_property:s%3F%60e:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \"No\") and not empty({{notion:block_property:SQfl:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n    \"🚨 Delete Bill ID\",\n    if(\n      contains(format({{notion:block_property:s%3F%60e:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}), \"Confirmed\") and format({{notion:block_property:SQfl:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) != {{notion:block_property:zYr%5C:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\n      \"Update Bill ID and Add a 🔴 for the Icon\",\n      \"✅ Bill ID Correct\"\n    )\n  )\n)"
+            }
+        },
+        "Integrations X": {
+            "id": "kv%5CC",
+            "name": "Integrations X",
+            "type": "formula",
+            "formula": {
+                "expression": "at(split(format({{notion:block_property:%5Ey%5Eg:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\",\"),{{notion:block_property:hR%7BW:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "language": {
+            "id": "kxQc",
+            "name": "language",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Language",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "f^A\\",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "profit % calc": {
+            "id": "k%7Dlc",
+            "name": "profit % calc",
+            "type": "formula",
+            "formula": {
+                "expression": "if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),({{notion:block_property:bZ%60W:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*{{notion:block_property:QfRf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}-first({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})*first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}))/(first({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})*first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})),({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}-first({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}))/first({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}))"
+            }
+        },
+        "Updated Buying CPL": {
+            "id": "ll%3BB",
+            "name": "Updated Buying CPL",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Main Contact Rollup": {
+            "id": "mTj%3C",
+            "name": "Main Contact Rollup",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Main Contact",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "ysi@",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "all brands API": {
+            "id": "ohS_",
+            "name": "all brands API",
+            "type": "formula",
+            "formula": {
+                "expression": "format({{notion:block_property:gzeR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Funnels API": {
+            "id": "pTsA",
+            "name": "Funnels API",
+            "type": "formula",
+            "formula": {
+                "expression": "split(format({{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\",\")"
+            }
+        },
+        "funnel change": {
+            "id": "rR~%5B",
+            "name": "funnel change",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Funnel Change",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "GEXs",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "Deal Confirmation Status": {
+            "id": "s%3F%60e",
+            "name": "Deal Confirmation Status",
+            "type": "select",
+            "select": {
+                "options": [
+                    {
+                        "id": "~StW",
+                        "name": "✅ Deal Confirmed",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "1898e639-2caf-4b21-9bdf-88cd42d855c6",
+                        "name": "❌ No Deal Negotiated",
+                        "color": "red",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "Funnels API2": {
+            "id": "tdE%7D",
+            "name": "Funnels API2",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "Sources API2": {
+            "id": "tkaO",
+            "name": "Sources API2",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "ADVERTISER GROUP Availability Text": {
+            "id": "ukbf",
+            "name": "ADVERTISER GROUP Availability Text",
+            "type": "formula",
+            "formula": {
+                "expression": "\"🟡 \" + {{notion:block_property:XbtQ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" Is this available: \\n\\n\" +\n{{notion:block_property:YHlZ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" || AVAILABILITY for \" +\nformatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \"dddd MMM D\") + \"\\n--\\n\" +\n{{notion:block_property:Hlhk:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" \"+{{notion:block_property:kxQc:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" [\" + {{notion:block_property:%60nJ%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"] \" +\nif(\n    not {{notion:block_property:J_%3CJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\n    if(\n        empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n        (\n            (\n                if(\n                    empty({{notion:block_property:D%5E%7CR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n                    format({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n                    {{notion:block_property:D%5E%7CR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}\n                )\n            ) + \"+\" + (\n                format(\n                    (\n                        if(\n                            empty({{notion:block_property:M%3Df~:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n                            first({{notion:block_property:~%3C%3EM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n                            {{notion:block_property:M%3Df~:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}\n                        )\n                    ) * 100\n                ) + \"%\"\n            )\n        ) + \"\\n\",\n        (\n            if(\n                empty({{notion:block_property:ll%3BB:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n                format({{notion:block_property:%3FgfX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n                {{notion:block_property:ll%3BB:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}\n            ) + \" CPL\\n\"\n        )\n    ),\n    if(\n        empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\n        (\n            {{notion:block_property:D%5E%7CR:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"+\" +\n            format({{notion:block_property:M%3Df~:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} * 100) + \"%\\n\"\n        ),\n        {{notion:block_property:ll%3BB:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\\n\"\n    )\n) +\n\"Funnels: \" + join({{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}, \", \") + \"\\n\" +\nformat({{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}) + \" Leads → \" + {{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "cap2": {
+            "id": "wrnH",
+            "name": "cap2",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "FINANCE GROUP deal text": {
+            "id": "xsIM",
+            "name": "FINANCE GROUP deal text",
+            "type": "formula",
+            "formula": {
+                "expression": "\"💰 @FinanceKitchenAds please note this request for prepay for the following deal and confirm if/when POP is sent: \\n\\n\"+{{notion:block_property:grGW:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" || Confirmed Deal for \"+formatDate({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\"dddd MMM D\")+\"\\n\"+ {{notion:block_property:Hlhk:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" \"+{{notion:block_property:kxQc:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+ \" [\" + join({{notion:block_property:AnQk:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\", \")+\"] \" + if(empty({{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),{{notion:block_property:k%3Eo%60:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},{{notion:block_property:Q%7Baf:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \" CPL\")+\"\\nFunnels: \" +join({{notion:block_property:%3Fyux:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}},\", \")+\"\\n\"+ if(empty({{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}),\"🚨 Enter Cap 🚨\",{{notion:block_property:ROrm:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" Leads → \") +{{notion:block_property:Vk%60%5D:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} +\n\"\\n\" + if(length(format({{notion:block_property:CI%5BL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})) > 0, \"\\n🚨 Campaign Deduction Allowance: \" + {{notion:block_property:CI%5BL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}} + \"%\", \"\") \n\t\t+\"\\nBalance Needed: $\"+{{notion:block_property:DLSM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\" + \" +first({{notion:block_property:IvtX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})*100+\"% Fee\\nTotal Transfer: $\" +round(({{notion:block_property:DLSM:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}*(1+first({{notion:block_property:IvtX:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}))*1000)/1000)+\"\\n\\nUSDT ERC20: 0x76bc0f161ea30a85f190a31e3ebfa42ea8992fce\nTRC20: TLppvPoUrRWTLBUr74boZuKCweJEvhuRo9\""
+            }
+        },
+        "Bill ID (copy)": {
+            "id": "zYr%5C",
+            "name": "Bill ID (copy)",
+            "type": "formula",
+            "formula": {
+                "expression": "\"Week \"+{{notion:block_property:%7B%3C%5BI:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\"-\"+format({{notion:block_property:Ja%3FJ:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})+\"-\"+{{notion:block_property:grGW:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}+\"-\"+{{notion:block_property:NM%5Da:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}}"
+            }
+        },
+        "Supplier Fee": {
+            "id": "zz%5Cb",
+            "name": "Supplier Fee",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Advertiser Payment Fee",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "ssSD",
+                "relation_property_id": "Y^De",
+                "function": "show_unique"
+            }
+        },
+        "Week # (for text)": {
+            "id": "%7B%3C%5BI",
+            "name": "Week # (for text)",
+            "type": "formula",
+            "formula": {
+                "expression": "week({{notion:block_property:DnXL:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Buying CRG": {
+            "id": "~%3C%3EM",
+            "name": "Buying CRG",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "CRG | Buying",
+                "relation_property_name": "🥮 Individual OFFERS | Kitchen",
+                "rollup_property_id": "EepM",
+                "relation_property_id": "Y^De",
+                "function": "show_original"
+            }
+        },
+        "buying cpa for text": {
+            "id": "~HG%5D",
+            "name": "buying cpa for text",
+            "type": "formula",
+            "formula": {
+                "expression": "first({{notion:block_property:%3EY%3Ei:00000000-0000-0000-0000-000000000000:c20fc664-b86f-49e6-a9fe-449f88ea49ad}})"
+            }
+        },
+        "Geo-Brand ID": {
+            "id": "title",
+            "name": "Geo-Brand ID",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "11b0e615-9a90-80f6-b745-e0dc9a0a39dc"
+    },
+    "url": "https://www.notion.so/11b0e6159a9080e39356fa80451493b9",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "developer_survey": "https://notionup.typeform.com/to/bllBsoI4?utm_source=postman",
+    "request_id": "af99099c-4d0d-40df-a49f-d30901896acc"
+}

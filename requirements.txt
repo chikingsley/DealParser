@@ -1,10 +1,14 @@
-python-telegram-bot
-python-dotenv
-pydantic
+python-telegram-bot>=20.0
 mistralai
+python-dotenv
+notion-client
 rich
+pydantic
 transformers
+httpx
 # Optional utilities
 aiohttp
 typing-extensions
-flask
+fastapi
+uvicorn
+pngrok  # for tunnel testing

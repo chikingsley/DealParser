@@ -9,7 +9,7 @@ from rich.console import Console
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from tools.training_client import TrainingDealParser  # Use local parser instead of API
+from model_training.training_client import TrainingDealParser  # Use local parser instead of API
 
 console = Console()
 
