@@ -58,3 +58,12 @@ Icon
 .tmp/
 .cache/
 .aider*
+
+# Project-specific ignores
+*.pkl
+*.model
+archive/data/training_data.jsonl
+archive/data/validation_data.jsonl
+
+# Archive
+archive/

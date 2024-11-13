@@ -1,6 +1,6 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from telegram.ext import ContextTypes, CallbackContext
-from bot.client import DealParser
+from bot.client import DealParser, FieldValidator
 import logging
 import time
 from typing import Any
@@ -15,7 +15,7 @@ logger.setLevel(logging.INFO)
 
 class MessageHandler:
     def __init__(self):
-        self.deal_parser = DealParser()
+        self.deal_parser = DealParser(message=None)
         self.current_deals = {}
         self.deal_statuses = {}  # Track status of each deal
         self.user_states = {}  # Track user states
@@ -78,12 +78,12 @@ class MessageHandler:
             f"📱 Source: {parsed_data.get('source', 'N/A')}\n"
             f"💰 Pricing Model: {parsed_data.get('pricing_model', 'N/A')}\n"
             f"💵 CPA: {parsed_data.get('cpa', 'N/A')}\n"
-            f"📈 CRG: {f'{parsed_data.get('crg')*100:.0f}%' if parsed_data.get('crg') else 'N/A'}\n"
+            f"📈 CRG: {f'{round(parsed_data.get('crg')*100, 2):.0f}%' if parsed_data.get('crg') else 'N/A'}\n"
             f"🎯 CPL: {parsed_data.get('cpl', 'N/A')}\n"
             f"━━━━━━━━━━━━━━━\n"
             f"🔄 Funnels: {', '.join(funnels) if funnels else 'N/A'}\n"
-            f"📊 CR: {f"{parsed_data.get('cr')*100}%" if parsed_data.get('cr') else 'N/A'}\n"
-            f"📉 Deduction Limit: {f"{parsed_data.get('deduction_limit')*100}%" if parsed_data.get('deduction_limit') else 'N/A'}\n"
+            f"📊 CR: {f'{round(parsed_data.get('cr')*100, 2):.0f}%' if parsed_data.get('cr') else 'N/A'}\n"
+            f"📉 Deduction Limit: {f'{round(parsed_data.get('deduction_limit')*100, 2):.0f}%' if parsed_data.get('deduction_limit') else 'N/A'}\n"
             f"━━━━━━━━━━━━━━━"
         )
 
@@ -115,13 +115,15 @@ class MessageHandler:
 
         return InlineKeyboardMarkup(keyboard)
 
+    def _clean_field(self, value, field_type='text'):
+        """Clean and format field values consistently"""
+        return FieldValidator.clean_value(value, field_type)
+
     async def _update_field_value(self, field: str, value: str) -> Any:
         """Validate and convert field values"""
         try:
             if field in ['crg', 'cr']:
-                # Remove % if present and convert to decimal
-                value = value.replace('%', '')
-                return float(value) / 100
+                return FieldValidator.clean_value(value, field)
             elif field in ['cpa', 'cpl']:
                 # Convert to float
                 return float(value)
@@ -136,139 +138,179 @@ class MessageHandler:
                 value = value.replace('%', '')
                 return float(value) / 100
             else:
-                # String fields
-                return value.strip()
+                # Use FieldValidator for other fields
+                return FieldValidator.clean_value(value, field)
         except ValueError as e:
             raise ValueError(f"Invalid value for {field}: {str(e)}")
 
-    async def handle_message(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Handle incoming messages"""
-        if not update.message or not update.message.text:
-            return
-            
-        user_id = update.effective_user.id
-        message = update.message.text
-        
-        # Check if user is editing a field
-        if user_id in self.editing_state:
-            try:
-                edit_info = self.editing_state[user_id]
-                deal_index = edit_info['deal_index']
-                field = edit_info['field']
-                
-                # Validate and convert value
-                try:
-                    validated_value = await self._update_field_value(field, message)
-                except ValueError as e:
-                    await update.message.reply_text(f"❌ {str(e)}\nPlease try again.")
-                    return
-                
-                # Update the deal
-                deal = self.current_deals[user_id]['deals'][deal_index]
-                if 'parsed_data' in deal:
-                    deal['parsed_data'][field] = validated_value
-                else:
-                    deal[field] = validated_value
-                
-                # Delete user's input message
-                await update.message.delete()
-                
-                # Update original message
-                original_message = edit_info.get('message')
-                if original_message:
-                    await original_message.edit_text(
-                        await self._format_deal_message(
-                            deal,
-                            deal_index + 1,
-                            len(self.current_deals[user_id]['deals']),
-                            user_id
-                        ),
-                        reply_markup=await self._create_keyboard(
-                            deal_index,
-                            len(self.current_deals[user_id]['deals']),
-                            self.deal_statuses.get(user_id, {})
-                        )
-                    )
-                
-                # Clear editing state
-                del self.editing_state[user_id]
-                return
-                
-            except Exception as e:
-                logger.error(f"Error updating field: {str(e)}")
-                await update.message.reply_text("❌ Error updating field. Please try again.")
-                return
-        
-        # Normal deal processing
+    async def handle_message(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        """Handle incoming messages and callback queries"""
         try:
-            # Send processing message
-            processing_message = await update.message.reply_text(
-                "🔄 Processing your deals...\n"
-                "Please wait while I analyze the information."
+            # Handle callback queries (button clicks) - NO timestamp check for callbacks
+            if update.callback_query:
+                await self.handle_callback(update, context)
+                return
+
+            # Check message age ONLY for new messages
+            if update.message and (time.time() - update.message.date.timestamp() > 30):
+                logger.info("Skipping old message")
+                return
+
+            # Handle text messages
+            if not update.message or not update.message.text:
+                logger.warning("Received update without message text")
+                return
+
+            user_id = update.effective_user.id
+            message_text = update.message.text
+            
+            # Check if user is in editing state FIRST
+            if user_id in self.editing_state:
+                await self._handle_edit_input(update, context)
+                return
+            
+            # If not editing, then check if it's a deal message
+            # Require at least two strong indicators to consider it a deal
+            strong_indicators = [
+                # Price patterns
+                r"\d+\s*\+\s*\d+%",          # 1000+10%
+                r"\$?\s*\d+\s*\+\s*\d+%",    # $1000+10%
+                r"(?:Price|CPA|CPL)\s*:?\s*[\d.]+", # Price: 1000, CPA: 1000, CPL: 15
+                
+                # Deal headers
+                r"(?:Partner|Company)\s*:",   # Partner: or Company:
+                r"(?:GEO|Country)\s*:",       # GEO: or Country:
+            ]
+            
+            supporting_indicators = [
+                # Deal elements
+                r"Source\s*:",
+                r"Funnel(?:s)?\s*:",
+                r"Landing Page\s*:",
+                r"model\s*:",
+                
+                # Country codes
+                r"[A-Z]{2}\s*(?:native|eng|fr|es|de)",  # e.g., "UK eng" or "FR native"
+                
+                # Traffic sources
+                r"(?:FB|Facebook|Google|SEO|Taboola|Native)\s+[Tt]raffic",
+            ]
+            
+            # Count strong and supporting indicators
+            strong_matches = sum(1 for pattern in strong_indicators 
+                               if re.search(pattern, message_text, re.IGNORECASE))
+            supporting_matches = sum(1 for pattern in supporting_indicators 
+                                  if re.search(pattern, message_text, re.IGNORECASE))
+            
+            # Require at least one strong indicator and one supporting indicator
+            is_deal = strong_matches >= 1 and supporting_matches >= 1
+            
+            # Also check it's not just a progress message
+            if "Deal Parsing Progress" in message_text or "Processing deal" in message_text:
+                is_deal = False
+            
+            if not is_deal:
+                # Regular conversation flow
+                response = ("I can help you submit deals! Just share the deal details including:\n"
+                           "• Partner/Company name\n"
+                           "• GEO/Country\n"
+                           "• Price (CPA/CPL)\n"
+                           "• Traffic source\n"
+                           "• Funnels")
+                await update.message.reply_text(response)
+                return
+
+            # Create initial message
+            self.processing_message = await update.message.reply_text(
+                "🔄 Starting deal analysis...\n"
+                "Please wait while I process your deals."
             )
             
-            # Parse deals
-            formatted_deals = await self.deal_parser.parse_deals(message)
-            logger.debug(f"Received deals from parser: {formatted_deals}")
+            # Update DealParser with the message
+            self.deal_parser.message = self.processing_message
             
-            if not formatted_deals:
-                await processing_message.edit_text(
-                    "❌ No valid deals found.\n\n"
-                    "Please format your deals like this:\n"
-                    "Partner: Name\n"
-                    "GEO - Price+CRG% - Funnels (source)"
-                )
-                return
-                
+            # Parse deals
+            formatted_deals = await self.deal_parser.parse_deals(message_text)
+            
             # Store deals for this user
             self.current_deals[user_id] = {
                 'deals': formatted_deals,
-                'current_index': 0
+                'current_index': 0,
+                'last_activity': time.time()
             }
             
-            # Also store in context for persistence
-            context.user_data['current_deals'] = self.current_deals[user_id]
-            logger.info(f"Stored deals for user {user_id}")
+            # Initialize status tracking
+            self.deal_statuses[user_id] = {}
             
-            # Show first deal
-            await self._display_current_deal(update, processing_message, user_id)
+            # Display the first deal
+            await self._display_current_deal(update, self.processing_message, user_id)
             
         except Exception as e:
-            error_details = traceback.format_exc()
-            logger.error(f"Error processing message: {str(e)}\n{error_details}")
-            await update.message.reply_text(
+            error_message = (
                 "❌ Error processing your message.\n"
                 "Please check the format and try again."
             )
+            logger.error(f"Error details: {str(e)}")
+            if hasattr(self, 'processing_message'):
+                try:
+                    await self.processing_message.edit_text(error_message)
+                except Exception as edit_error:
+                    logger.error(f"Error updating error message: {str(edit_error)}")
+                    if update.message:
+                        await update.message.reply_text(error_message)
+            elif update.message:
+                await update.message.reply_text(error_message)
 
     async def _display_current_deal(self, update: Update, message, user_id: int):
         """Display current deal with navigation"""
         user_data = self.current_deals.get(user_id)
-        if not user_data:
+        if not user_data or not user_data.get('deals'):
+            logger.error(f"No deals found for user {user_id}")
+            await message.edit_text("❌ No deals to display. Please submit some deals first.")
             return
 
-        current_index = user_data['current_index']
+        current_index = user_data.get('current_index', 0)
         total_deals = len(user_data['deals'])
-        deal = user_data['deals'][current_index]
-
-        # Pass user_id to _format_deal_message
-        deal_text = await self._format_deal_message(
-            deal, 
-            current_index + 1, 
-            total_deals,
-            user_id
-        )
         
-        # Create keyboard
-        reply_markup = await self._create_keyboard(current_index, total_deals, self.deal_statuses.get(user_id, {}))
-
+        # Validate index
+        if current_index >= total_deals:
+            logger.error(f"Invalid index {current_index} for {total_deals} deals")
+            current_index = 0
+            user_data['current_index'] = 0
+        
         try:
+            deal = user_data['deals'][current_index]
+            
+            # Pass user_id to _format_deal_message
+            deal_text = await self._format_deal_message(
+                deal, 
+                current_index + 1, 
+                total_deals,
+                user_id
+            )
+            
+            # Create keyboard
+            reply_markup = await self._create_keyboard(
+                current_index, 
+                total_deals, 
+                self.deal_statuses.get(user_id, {})
+            )
+
             if message:
                 await message.edit_text(deal_text, reply_markup=reply_markup)
             else:
                 await update.message.reply_text(deal_text, reply_markup=reply_markup)
+                
         except Exception as e:
             logger.error(f"Error displaying deal: {str(e)}")
+            error_message = (
+                "❌ Error displaying deal.\n"
+                "Please try submitting your deals again."
+            )
+            if message:
+                await message.edit_text(error_message)
+            else:
+                await update.message.reply_text(error_message)
 
     async def _submit_to_notion(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Submit approved deals to Notion"""
@@ -375,12 +417,16 @@ class MessageHandler:
                 if deal['cpa_buying']:
                     summary += f"💰 CPA: ${deal['cpa_buying']}\n"
                 if deal['crg_buying']:
-                    summary += f"📈 CRG: {float(deal['crg_buying'])*100:.0f}%\n"
+                    summary += f" CRG: {float(deal['crg_buying'])*100:.0f}%\n"
                 if deal['cpl_buying']:
                     summary += f"🎯 CPL: ${deal['cpl_buying']}\n"
                 
                 if deal['funnels']:
-                    summary += f"🔄 Funnels: {', '.join(deal['funnels'])}\n"
+                    # Handle both string and list cases
+                    if isinstance(deal['funnels'], str):
+                        summary += f"🔄 Funnels: {deal['funnels']}\n"
+                    else:
+                        summary += f"🔄 Funnels: {', '.join(deal['funnels'])}\n"
                 
                 summary += "✅ Successfully submitted\n\n"
 
@@ -397,7 +443,7 @@ class MessageHandler:
                 text=summary,
                 reply_markup=InlineKeyboardMarkup(keyboard)
             )
-
+            
             # Clear processed deals
             del self.current_deals[user_id]
             del self.deal_statuses[user_id]
@@ -445,10 +491,10 @@ class MessageHandler:
                     if user_id in self.deal_statuses:
                         del self.deal_statuses[user_id]
                     
-                    # Then send new message with first deal
+                    # Reset to first deal and replace the current message entirely
                     if user_id in self.current_deals:
                         self.current_deals[user_id]['current_index'] = 0
-                        await update.effective_chat.send_message(
+                        await query.edit_message_text(
                             text=await self._format_deal_message(
                                 self.current_deals[user_id]['deals'][0],
                                 1,
@@ -554,19 +600,10 @@ class MessageHandler:
                 
             elif action == 'approve':
                 try:
-                    # Update status
+                    # Update status in our local storage
                     if user_id not in self.deal_statuses:
                         self.deal_statuses[user_id] = {}
                     self.deal_statuses[user_id][index] = 'approved'
-                    
-                    # Store the status in context.user_data for persistence
-                    if 'deal_statuses' not in context.user_data:
-                        context.user_data['deal_statuses'] = {}
-                    context.user_data['deal_statuses'][index] = 'approved'
-                    
-                    # Ensure deals are stored in context
-                    if 'current_deals' not in context.user_data:
-                        context.user_data['current_deals'] = self.current_deals[user_id]
                     
                     # If there's a next deal, show it in the same window
                     if index < total_deals - 1:
@@ -582,6 +619,7 @@ class MessageHandler:
                         
                 except Exception as e:
                     logger.error(f"Error in approve action: {str(e)}", exc_info=True)
+                    await query.answer("Error processing approval")
                     
             elif action == 'reject':
                 # Update status
@@ -659,53 +697,80 @@ class MessageHandler:
             error_details = traceback.format_exc()
             logger.error(f"Error showing summary: {str(e)}\n{error_details}")
 
-    def _clean_field(self, value, field_type='text'):
-        """
-        Clean and format field values consistently.
-        field_type can be: 'text', 'list', 'geo', 'sources', 'language'
-        """
-        try:
-            if not value:  # Handle None or empty values
-                return ''
-                
-            value = str(value).strip()
+    async def _handle_progress(self, stage: str, data: dict):
+        """Handle progress updates from client"""
+        if not hasattr(self, 'processing_message'):
+            return
             
-            if field_type == 'sources':
-                # Clean sources: remove spaces around separators, convert separators to commas
-                value = (value.replace(' + ', ',')
-                             .replace('+', ',')
-                             .replace('|', ',')
-                             .replace(' ,', ',')
-                             .replace(', ', ',')
-                             .strip())
-                return ','.join(filter(None, value.split(',')))  # Remove empty items
+        try:
+            # Get message from data
+            message = data.get('message', '')
+            
+            # Add progress bar for deal processing
+            if stage == 'progress' and 'current' in data and 'total' in data:
+                current = data['current']
+                total = data['total']
+                progress = current / total
+                bar_length = 20
+                filled = int(bar_length * progress)
+                bar = '█' * filled + '░' * (bar_length - filled)
                 
-            elif field_type == 'list':
-                # Clean lists: remove brackets, quotes, extra spaces
-                value = (value.replace('[', '')
-                             .replace(']', '')
-                             .replace("'", '')
-                             .replace('"', '')
-                             .strip())
-                return ','.join(filter(None, [item.strip() for item in value.split(',')]))
-                
-            elif field_type == 'geo':
-                # Clean geo: remove spaces
-                return value.replace(' ', '')
-                
-            elif field_type == 'language':
-                # Clean language: capitalize first letter, handle common cases
-                value = value.strip().lower()
-                if value in ['eng', 'english', 'en']:
-                    return 'English'
-                elif value in ['nat', 'native', 'local']:
-                    return 'Native'
-                else:
-                    return value.capitalize()
-                    
-            else:  # Default text cleaning
-                return value.strip()
+                message = (
+                    f"{message}\n\n"
+                    f"[{bar}] {current}/{total}"
+                )
+            
+            # Only update if message has changed
+            if self.processing_message.text != message:
+                await self.processing_message.edit_text(message)
                 
         except Exception as e:
-            logger.warning(f"Error cleaning field ({field_type}): {str(e)}")
-            return value  # Return original value if cleaning fails
+            logger.error(f"Error updating progress: {str(e)}")
+
+    async def _handle_edit_input(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+        """Handle text input after edit button click"""
+        try:
+            user_id = update.effective_user.id
+            edit_state = self.editing_state[user_id]
+            
+            # Get the field and deal being edited
+            field = edit_state['field']
+            deal_index = edit_state['deal_index']
+            original_message = edit_state['message']
+            
+            # Get the new value and validate/convert it
+            new_value = update.message.text.strip()
+            try:
+                converted_value = await self._update_field_value(field, new_value)
+            except ValueError as e:
+                await update.message.reply_text(
+                    f"❌ Invalid value: {str(e)}\n"
+                    "Please try again or click Back to cancel."
+                )
+                return
+
+            # Update the deal with new value
+            deal = self.current_deals[user_id]['deals'][deal_index]
+            if 'parsed_data' in deal:
+                deal['parsed_data'][field] = converted_value
+            else:
+                deal[field] = converted_value
+
+            # Delete the edit prompt message and user's input message
+            await original_message.delete()
+            await update.message.delete()
+
+            # Show updated deal
+            await self._display_current_deal(update, None, user_id)
+
+            # Clear editing state
+            del self.editing_state[user_id]
+
+        except Exception as e:
+            logger.error(f"Error handling edit input: {str(e)}")
+            await update.message.reply_text(
+                "❌ Error updating value. Please try again."
+            )
+            # Clean up editing state on error
+            if user_id in self.editing_state:
+                del self.editing_state[user_id]

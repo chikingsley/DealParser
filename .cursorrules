@@ -1,0 +1,81 @@
+You are an expert in Python, Telegram Bot Development, FastAPI, Uvicorn, Ngrok, Deep Learning (Transformers and Mistral models), and best practices for model training, testing, and deployment.
+
+Key Principles
+
+	•	Write concise, structured responses with Python code examples.
+	•	Use modular, readable, and testable code with a functional programming approach where possible.
+	•	Ensure PEP 8 compliance and use type hints for all functions and variables.
+	•	Use Rich for enhanced logging, especially for debugging and presenting output in the terminal.
+	•	Use Pydantic for data validation and FastAPI dependency management.
+
+Python and Local Development
+
+	•	Structure code in a modular way: organize routers, utilities, models, and tests in separate folders.
+	•	Testing: Use FastAPI with Uvicorn for serving local APIs, and Ngrok for tunneling local servers for external testing.
+	•	Type Hints and Validation: Use Pydantic for input validation and response schemas.
+	•	Logging: Use Rich to produce clear, informative logs; include detailed error messages and logging for better traceability.
+
+Telegram Bot Development
+
+	•	Use the python-telegram-bot library for bot interactions.
+	•	Modularize bot commands, handlers, and utility functions for scalability.
+	•	Async programming: Use asyncio for non-blocking bot functions, especially when interacting with APIs.
+	•	Error handling: Implement try-except for error-prone operations and use descriptive logging with Rich.
+
+Deep Learning with Transformers and Mistral Models
+
+	•	Libraries: Use transformers for model management, focusing on Mistral models.
+	•	Use PyTorch as the primary backend, leveraging Mistral and Transformers library for handling model training, fine-tuning, and inference.
+	•	Data Processing: Follow best practices for tokenization and batching, with attention to efficient sequence handling.
+	•	Training Optimization: Use distributed training techniques (e.g., torch.distributed, DataParallel) when using GPUs.
+	•	Fine-tuning: Apply efficient techniques such as LoRA and P-tuning for quick and resource-efficient model updates.
+
+Model Training and Evaluation
+
+	•	Use PyTorch’s DataLoader for efficient data loading with transformations and batching.
+	•	Implement mixed-precision training with torch.cuda.amp to optimize GPU utilization.
+	•	Track experiments with TensorBoard or Weights and Biases.
+	•	Implement data augmentation for robustness, especially in NLP tasks with augmentations like random word insertions or substitutions.
+
+FastAPI and Uvicorn for API Development
+
+	•	Use FastAPI’s dependency injection and Pydantic’s BaseModel for clean, declarative data validation.
+	•	Async operations: Use async def for non-blocking I/O-bound operations.
+	•	Middleware: Implement middleware for CORS, logging, and error handling.
+	•	Testing: Use FastAPI’s test client for route testing, and Ngrok for testing webhooks and bot interactions locally.
+
+Ngrok for Local Development and Webhook Testing
+
+	•	Use Ngrok to expose FastAPI endpoints for testing external services (e.g., Telegram webhooks).
+	•	Keep Ngrok configurations (e.g., auth tokens, region settings) in environment variables.
+
+Performance Optimization
+
+	•	Minimize blocking I/O in API routes; use asynchronous requests for APIs and database calls.
+	•	Implement lazy loading for larger datasets and caching for frequently accessed data.
+	•	Use structured and level-specific logging (info, error) with Rich.
+
+Error Handling and Debugging
+
+	•	Use try-except blocks for operations involving I/O or network interactions.
+	•	Logging: Implement structured logging with Rich for terminal output and save logs for debugging and monitoring.
+	•	Use Pydantic for validating inputs and outputs to ensure consistent data formats.
+
+Dependencies
+
+	•	python-telegram-bot
+	•	fastapi
+	•	uvicorn
+	•	ngrok
+	•	torch, transformers (for Mistral models)
+	•	rich (for logging)
+	•	pydantic
+
+Key Conventions
+
+	1.	Modularize code for maintainability and reuse.
+	2.	Follow non-blocking, async programming for scalable Telegram bot and API interactions.
+	3.	Prioritize logging, validation, and error handling for better debugging and monitoring.
+	4.	Use configuration files (e.g., .env) to manage environment variables securely.
+
+For additional best practices, refer to the FastAPI, Uvicorn, Ngrok, and Transformers documentation.

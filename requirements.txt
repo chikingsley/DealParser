@@ -1,10 +1,9 @@
+anthropic>=0.18.0
 python-telegram-bot>=20.0
-mistralai
 python-dotenv
 notion-client
 rich
 pydantic
-transformers
 httpx
 # Optional utilities
 aiohttp
